@@ -1,0 +1,144 @@
+#+1576413353
+pwd
+#+1576413355
+ll
+#+1576413360
+ls
+#+1576413361
+ls -la
+#+1576413366
+touch .
+#+1576413969
+who am i
+#+1576414001
+lsb_release -a
+#+1576414024
+nginx
+#+1576414394
+exit
+#+1576414528
+ls
+#+1576414565
+nano composer.json
+#+1576414646
+systemctl list-units
+#+1576414653
+top
+#+1576414657
+htop
+#+1576414668
+php -v
+#+1576414702
+mysql
+#+1576414719
+mysql -u dev
+#+1576414726
+mysql -u dev -p
+#+1576414745
+mysql -u dev -p
+#+1576414762
+mysql -u dev -p
+#+1576414784
+sudo mysql
+#+1576414878
+sudo htop
+#+1576414912
+ls
+#+1576414926
+nano .etc
+#+1576414946
+cd config/
+#+1576414950
+ls
+#+1576414961
+nano auth.php
+#+1576415026
+mysql
+#+1576415162
+mysql -u root
+#+1576415295
+mysql
+#+1576415298
+mysql -uroot
+#+1576415305
+cd
+#+1576415852
+sudo mysql
+#+1576415874
+man sudo
+#+1576415948
+sudo -u dev mysql
+#+1576415960
+sudo /usr/bin/mysql
+#+1576416041
+sudo -i dev mysql
+#+1576416052
+sudo /usr/bin/mysql
+#+1576416055
+man sudo
+#+1576416076
+sudo /usr/bin/mysql
+#+1576416085
+sudo mysql
+#+1576416086
+sudo mysql
+#+1576416180
+mysql -u dev
+#+1576416194
+sudo mysql
+#+1576416490
+w
+#+1576477785
+cd ..
+#+1576477790
+ls
+#+1576477828
+.gitignore
+#+1576477863
+mkdir temp
+#+1576477878
+mkdir temp/dump
+#+1576477944
+ls /home/dev/
+#+1576477949
+ls /home/
+#+1576477954
+ls /home/dev/
+#+1576478305
+mkdir /home/dev/temp
+#+1576478323
+ls /
+#+1576478328
+ls /dev/
+#+1576478334
+ls /
+#+1576478362
+ls /home/
+#+1576478367
+ls /home/idle/
+#+1576478377
+ls /var/
+#+1576478389
+ls /usr/
+#+1576478460
+pwd
+#+1576478500
+ls /var/www/html/blog/temp/
+#+1576478754
+sudo chmod 777 -R temp/dump
+#+1576479404
+exit
+#+1576479441
+exit
+#+1576498482
+ll
+#+1576498489
+cp composer.lock composer.lock1
+#+1576498491
+lt
+#+1576498495
+rm composer.lock1
+#+1576499235
+sudo mysql
+#+1576500578
+exit
