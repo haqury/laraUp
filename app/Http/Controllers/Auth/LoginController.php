@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -35,5 +37,29 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    /**
+     * Переопределяет поле аутентификации пользователя
+     * @return string
+     */
+    public function username()
+    {
+        return 'login';
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt(
+            [
+                'login' => $credentials['email'],
+                'password' => $credentials['password'],
+                'active' => 1
+            ]
+        )) {
+            return redirect()->intended('home');
+        }
+        return redirect()->intended('login');
     }
 }
