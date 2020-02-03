@@ -2,7 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\LangsText;
 use Illuminate\Console\Command;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
@@ -22,6 +24,8 @@ class test extends Command
      */
     protected $description = 'Command description';
 
+    protected $argument;
+
     /**
      * Create a new command instance.
      *
@@ -37,14 +41,9 @@ class test extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle($name)
     {
-        DB::table('users')->insert([
-            'name' => str_random(10),
-            'login' => str_random(10),
-            'active' => 0,
-            'email' => str_random(10).'@gmail.com',
-            'password' => Hash::make(111),
-        ]);
+
+        var_dump();die;
     }
 }
