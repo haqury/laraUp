@@ -14,11 +14,11 @@ class CreateLangText extends Migration
     public function up()
     {
         Schema::create('langs_text', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
+            $table->bigIncrements('id')->comment('ID');
+            $table->string('name')->comment('название/ключевая фраза');
             $table->integer('lang_id')->references('id')->on('lang')
-                ->onDelete('cascade');
-            $table->text('text');
+                ->onDelete('cascade')->comment('ID языка');
+            $table->text('text')->comment('текст');
             $table->timestamps();
         });
     }

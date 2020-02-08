@@ -14,9 +14,9 @@ class Role extends Migration
     public function up()
     {
         Schema::create('role', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('comment');
+            $table->bigIncrements('id')->comment('ID');
+            $table->string('name')->comment('название роли');
+            $table->string('comment')->comment('коментарий');
         });
     }
 
