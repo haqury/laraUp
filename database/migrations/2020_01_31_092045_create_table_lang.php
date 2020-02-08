@@ -14,11 +14,11 @@ class CreateTableLang extends Migration
     public function up()
     {
         Schema::create('langs', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('shortName');
-            $table->string('subdomain');
-            $table->string('name');
-            $table->tinyInteger('active');
+            $table->bigIncrements('id')->comment('ID пользователя');
+            $table->string('shortName')->comment('короткое название');
+            $table->string('subdomain')->comment('поддомен');
+            $table->string('name')->comment('язык');
+            $table->float('active')->comment('вкл');
             $table->timestamps();
         });
     }
