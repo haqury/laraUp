@@ -14,9 +14,10 @@ class UsersRoleLink extends Migration
     public function up()
     {
         Schema::create('users_role_link', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('user_id')->index();
-            $table->integer('role_id')->index();
+            $table->bigIncrements('id')->comment('ID');
+            $table->integer('user_id')->index()->comment('ID пользователя');
+            $table->integer('role_id')->index()->comment('ID роли');
+            $table->float('active')->index()->comment('ID роли');
         });
     }
 
