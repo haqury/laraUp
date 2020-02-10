@@ -32,5 +32,14 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('endIsRole', function () {
             return '<?php } ?>';
         });
+
+
+        Blade::directive('controller', function ($controllerName) {
+            $controllerAction = explode('@', $controllerName);
+            $controllerName = '\App\Http\Controllers\\' . $controllerAction[0];
+            $action = $controllerAction[1];
+            $controller = new $controllerName;
+            return $controller->$action();
+        });
     }
 }

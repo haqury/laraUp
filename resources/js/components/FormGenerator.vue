@@ -1,6 +1,12 @@
 <template>
     <div class="panel-body">
-        <vue-form-generator :schema="schema" :model="model" :options="formOptions"></vue-form-generator>
+        <vue-form-generator :schema="config.schema" :model="config.model" :options="config.formOptions">
+
+        </vue-form-generator>
+        <input type="button" v-on:click="submit" v-on:change="$emit('change', $event.target.checked)" value=submit>
+        <div>
+            <div v-html="result.html"></div>
+        </div>
     </div>
 </template>
 
@@ -9,16 +15,16 @@ import Vue from 'vue'
 import VueFormGenerator from 'vue-form-generator'
 import 'vue-form-generator/dist/vfg.css'
 
-Vue.use(VueFormGenerator)
-export default {
-    name: 'dasdasd',
-    props: ['model', 'schema', 'formOptions'],
-    data () {
-        return {
-            schema: schema,
-            model: model,
-            formOptions: formOptions
-        }
-    }
+var form = Vue.use(VueFormGenerator);
+    export default {
+        props: ['config', 'controller', 'result'],
+        methods: {
+            submit: function() {
+                let controllerCall = eval("window."+this.controller);
+                var result = controllerCall.submit(this);
+                console.log(result);
+            }
+}
+
 }
 </script>

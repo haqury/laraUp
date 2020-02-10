@@ -12,4 +12,12 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+    .autoload({
+        jquery: ['$', 'window.jQuery', 'jQuery'],
+    })
+    .scripts(
+        [
+            'resources/js/Controller.js',
+            'resources/js/Controller/Block.js',
+        ], 'public/js/topack.js')
+    .sass('resources/sass/app.scss', 'public/css')
